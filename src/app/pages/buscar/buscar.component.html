@@ -1,0 +1,33 @@
+<div class="container mt-5" *ngIf="heroesFound.length == 0">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-danger" role="alert">
+                No existen resultados con el término: {{ text }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5 animate__animated animate__fadeIn">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div *ngFor="let heroe of heroesFound" class="col">
+            <div class="card h-100">
+                <img [src]="heroe.images.lg" class="card-img-top" [alt]="heroe.name">
+                <div class="card-body">
+                    <h5 class="card-title">{{ heroe.name }}</h5>
+                    <label class="card-text">Intelligence: <strong>{{ heroe.powerstats.intelligence }}</strong></label><br>
+                    <label class="card-text">Power: <strong>{{ heroe.powerstats.power }}</strong></label><br>
+                    <label class="card-text">Speed: <strong>{{ heroe.powerstats.speed }}</strong></label><br>
+                    <label class="card-text">Gender: <strong>{{ heroe.appearance.gender }}</strong></label><br>
+                    <label class="card-text">Race: <strong>{{ heroe.appearance.race }}</strong></label><br>
+                    <button (click)="verHeroe(heroe.id)" class="btn btn-ver w-100 mt-3">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <button (click)="back()" class=" btn btn-danger btn-lg mt-5">Regresar</button>
+        </div>
+    </div>
+</div>

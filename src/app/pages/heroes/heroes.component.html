@@ -1,0 +1,19 @@
+<app-buscador></app-buscador>
+<div class="container mt-5 mb-5">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div *ngFor="let heroe of heroesAleatorios" class="col animate__animated animate__fadeIn">
+            <div class="card h-100">
+                <img [src]="heroe.images.lg" class="card-img-top" [alt]="heroe.name">
+                <div class="card-body">
+                    <h5 class="card-title">{{ heroe.name }}</h5>
+                    <label class="card-text">Intelligence: <strong>{{ heroe.powerstats.intelligence }}</strong></label><br>
+                    <label class="card-text">Power: <strong>{{ heroe.powerstats.power }}</strong></label><br>
+                    <label class="card-text">Speed: <strong>{{ heroe.powerstats.speed }}</strong></label><br>
+                    <label class="card-text">Gender: <strong>{{ heroe.appearance.gender }}</strong></label><br>
+                    <label class="card-text">Race: <strong>{{ heroe.appearance.race }}</strong></label><br>
+                    <button (click)="verHeroe(heroe.id)" class="btn btn-ver w-100 mt-3">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.card-title{
+    text-align: center;
+    font-size: 25px;
+    color: #0044A6;
+}
+.btn-ver{
+    color: #0044A6;
+    border: solid 1px #0044A6;
+}
+.btn-ver:hover{
+    background-color: #0044A6;
+    color: #fff;
+}

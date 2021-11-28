@@ -1,0 +1,72 @@
+<div *ngIf="heroe.length !== 0" class="container animate__animated animate__fadeIn">
+    <div class="text-center mt-5">
+        <h1>{{ heroe.name }}</h1>
+    </div>
+    <hr>
+    <div class="row mt-5">
+        <div class="col-lg-4 text-center mb-5">
+            <img [src]="heroe.images.md" [alt]="heroe.name" class="img-thumbnail">
+        </div>
+
+        <div class="col-lg-8 mb-5">
+
+
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="text-center"><i class="fas fa-briefcase fa-3x mt-2"></i></span>
+                        <div class="card-body">
+                            <h5 class="card-title title-1">Work</h5>
+                            <label><strong>Base: </strong>{{ heroe.work.base }}</label><br>
+                            <label><strong>Occupation: </strong>{{ heroe.work.occupation }}</label><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="text-center"><i class="fas fa-fire fa-3x mt-2"></i></span>
+                        <div class="card-body">
+                            <h5 class="card-title title-2">Biography</h5>
+                            <label><strong>Alter egos: </strong>{{ heroe.biography.alterEgos }}</label><br>
+                            <label><strong>First appearance: </strong>{{ heroe.biography.firstAppearance }}</label><br>
+                            <label><strong>Full name: </strong>{{ heroe.biography.fullName }}</label><br>
+                            <label><strong>Place of birth: </strong>{{ heroe.biography.placeOfBirth }}</label><br>
+                            <label><strong>Publisher: </strong>{{ heroe.biography.publisher }}</label><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="text-center"><i class="fas fa-skull fa-3x mt-2"></i></span>
+                        <div class="card-body">
+                            <h5 class="card-title title-3">Power stats</h5>
+                            <label><strong>Combat: </strong>{{ heroe.powerstats.combat }}</label>&nbsp;&nbsp;
+                            <label><strong>Durability: </strong>{{ heroe.powerstats.durability }}</label><br>
+                            <label><strong>Intelligence </strong>{{ heroe.powerstats.intelligence }}</label>&nbsp;&nbsp;
+                            <label><strong>Power: </strong>{{ heroe.powerstats.power }}</label><br>
+                            <label><strong>Speed: </strong>{{ heroe.powerstats.speed }}</label>&nbsp;&nbsp;
+                            <label><strong>Strength: </strong>{{ heroe.powerstats.strength }}</label><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="text-center"><i class="fas fa-shield-alt fa-3x mt-2"></i></span>
+                        <div class="card-body">
+                            <h5 class="card-title title-4">Appearance</h5>
+                            <label><strong>Eye Color: </strong>{{ heroe.appearance.eyeColor }}</label>&nbsp;&nbsp;
+                            <label><strong>Gender: </strong>{{ heroe.appearance.gender }}</label><br>
+                            <label><strong>Hair Color: </strong>{{ heroe.appearance.hairColor }}</label>&nbsp;&nbsp;
+                            <label><strong>Race: </strong>{{ heroe.appearance.race }}</label><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <button (click)="back()" class=" btn btn-danger btn-lg mt-3">Regresar</button>
+        </div>
+    </div>
+</div>
