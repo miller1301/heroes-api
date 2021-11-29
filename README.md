@@ -1,6 +1,10 @@
-# TestFrontEnd
+# TestFrontEnd - Heroes API
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+
+## Install Node Packages (required)
+
+Run `npm install` for install node packages.
 
 ## Development server
 
